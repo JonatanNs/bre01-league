@@ -1,0 +1,16 @@
+{% extends "home.html.twig" %}
+{% extends "layout.html.twig" %}
+
+{% block title %}
+    Les teams
+    {{ parent() }}
+{% endblock %}
+
+{% block TeamdelaLeague %}
+    {% for teamWithLogo in teamsWithLogo %}
+        <p>{{ teamWithLogo.name }}</p>  
+        <p>{{ teamWithLogo.description }}</p>
+        <img src="{{ teamWithLogo.url }}"  alt="{{ teamWithLogo.alt }}" />
+    {% endfor %}
+{% endblock %}
+

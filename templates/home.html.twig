@@ -1,0 +1,85 @@
+{% extends "layout.html.twig" %}
+
+{% block header %}
+    <h1>THE LEAGUE</h1>
+    <nav>
+        <ul>
+            <li><a href="">LES TEAMS</a></li>
+            <li><a href="">LES PLAYERS</a></li>
+            <li><a href="">LES MATCHS</a></li>
+        </ul>
+    </nav>
+{% endblock %}
+
+{% block sousHeader %}
+<section class="sousHeader">
+    <h2>TOUT SUR LA LEAGUE</h2>
+    <p>Les players, les teams et l'actu des matchs</p>
+</section>
+{% endblock %}
+
+{% block teamAlaUne %}
+<section class="titleTeamALaUne">
+    <h3>LA TEAM A LA UNE</h3>
+    <article class="blockteamALaUne">
+                {% set logo = random(teamsWithLogo) %}
+            <figure class="logo-teamALaUne">
+                <img src="{{ logo.url }}" alt="{{ logo.alt }}">
+            </figure>
+            <h3>{{ logo.name }}</h3>    
+        <ul class="teamALaUne-playeurs">
+            <h4>Les players</h4> 
+                    {% for playerr in playersWhereTeam %}
+                <li>
+                    <article class="teamALaUne-playeursImg">    
+                        {% if logo.name == playerr.name %}
+                        <figure>
+                            <img src="{{playerr.url}}" alt="{{playerr.alt}}"/>
+                        <figure>
+                        <h5 class="teamALaUne-playeursName"> 
+                            {{ playerr.nickname }} 
+                        </h5>
+                    </article>
+                        {% endif %}
+                </li>
+                    {% endfor %}
+        </ul>
+    </article>
+</section>
+{% endblock %}
+
+{% block playersAlaUne %}
+    <article class="titlePlayersALaUne">
+        <h3>Player a la Une</h3>
+            <ul class="playersALaUne">
+            {% for threeplayerWhereTeam in  threeplayersWhereTeam %}
+                <li class="playersALaUne-playerImg">
+                    <p class="playersALaUne-img">
+                        <img src='{{threeplayerWhereTeam.url}}' alt='{{threeplayerWhereTeam.alt}}' />
+                    <p>
+                    <p class="playersALaUne-teamNickName">{{threeplayerWhereTeam.nickname}}</p>
+                    <p class="playersALaUne-teamName">{{threeplayerWhereTeam.name}}</p>
+                </li>
+                    
+            {% endfor %}
+            </ul>
+    </article>
+{% endblock %}
+
+
+{% block dernierMatch %}
+    <article class="dernierMatch">
+        <h3>Le dernier match</h3>
+        <ul class="dernierMatch-logo">     
+            {% for img in  twoLogo %}  
+            <li class="dernierMatch-logoImg"> 
+                <p>       
+                    <img src='{{img.url}}' alt='{{img.alt}}'/> 
+                </p>
+            </li>
+            {% endfor %}
+        </ul>
+    </article>
+{% endblock %}
+
+

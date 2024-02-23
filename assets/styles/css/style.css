@@ -1,0 +1,170 @@
+*{
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 1.6rem;
+    font-family: 'Roboto';
+    margin: 0;
+    background-color: var(--darkerGrey);
+    color:var(--white);
+}
+
+a{
+    text-decoration: none;
+    color: var(--white);
+}
+li{
+    list-style: none;
+}
+
+:root{
+    --darkerGrey : #0b132b;
+    --darkGrey : #1c2541;
+    --yellow : #d4b52f;
+    --green: #509d77;
+    --pink : #d97ab5;
+    --blue : #45a0ec;
+    --purple : #9e87cb;
+    --red : #d66f75;
+    --grey : #83a1bb;
+    --white : #ffffff;
+}
+
+
+/*********HEADER**********/
+.header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.header nav ul{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15em;
+}
+
+/*********SOUS-HEADER**********/
+.sousHeader{
+    background-image: url(/docker-compose-lamp/www/bre01-league/assets/img/home_background.png);
+    background-size: cover;
+    background-position: top;
+    padding: 2em;
+    margin-top: 1em;
+    text-align: center;
+
+}
+
+.sousHeader h2{
+    font-size: 6rem;
+    
+}
+
+.sousHeader p{
+    font-size: 4rem;
+    padding-top: 2em;
+}
+/*********MAIN**********/
+.container{
+    text-align: center;
+}
+
+/*********  MAIN - LA TEAM A LA UNE **********/
+
+.titleTeamALaUne h3{
+    font-size: 3rem;
+    color: var(--yellow);
+    text-decoration:underline;
+}
+
+.blockteamALaUne{
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.logo-teamALaUne img {
+    width: 100%;
+}
+
+.teamALaUne-playeurs{
+    display: flex;
+    flex-direction: row;
+    margin-top: 9em;
+    margin-left: -10em;
+}
+
+.teamALaUne-playeurs h4, .teamALaUne-playeurs h4{
+    text-wrap: nowrap;
+}
+
+.teamALaUne-playeurs h4{
+    margin-top: -1em;
+    padding-left: 5em;
+}
+
+.teamALaUne-playeursImg figure img {
+    width: 70%;
+}
+
+.teamALaUne-playeursName{
+    
+}
+
+/*******Player a la Une***********/
+
+.titlePlayersALaUne h3{
+    font-size: 3rem;
+    color: var(--yellow);
+    text-decoration:underline;
+}
+
+.playersALaUne{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.playersALaUne p{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.playersALaUne-playerImg p img {
+    width: 50%;
+}
+
+.playersALaUne-playerName p:first-of-type  {
+    color: red;
+}
+
+.playersALaUne-teamName{
+    color: var(--yellow);
+}
+
+/*******Le dernier match*********/
+
+.dernierMatch h3{
+    font-size: 3rem;
+    color: var(--yellow);
+    text-decoration:underline;
+}
+
+.dernierMatch-logo{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2em;
+}
+
+.dernierMatch-logoImg p img{
+    width: 50%;
+}
